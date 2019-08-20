@@ -1,0 +1,127 @@
+ <div class="container">
+  <div class="row">
+      <div class="col-md-3"></div>
+
+    <div class="col-md-6">
+      <h3 class="text-center my-4">Search for Weather:</h3>
+      <form
+        [formGroup]="weatherSearchForm"
+        (ngSubmit)="sendToAPIXU(weatherSearchForm.value)"
+      >
+        <div class="form-group">
+          <input
+            class="form-control"
+            type="text"
+            id="weatherLocation"
+            aria-describedby="weatherLocation"
+            placeholder="Please input a Location"
+            formControlName="location"
+          />
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success btn-md">
+            Search for the weather
+          </button>
+        </div>
+      </form>
+    </div>
+    
+ 
+  </div>
+  </div>
+
+<app-weather-details
+    [weatherData]= "weatherData"
+></app-weather-details> 
+   <!--=================================================================================================================
+  ==========================================================================================================
+========================================================================================================
+   
+
+   <div class="weather-forecast" role="main">
+      <div class="location">New York, NY</div>
+      <div class="date">Tuesday, April 15th</div>
+      <div class="desc">Overcast</div>
+      <div class="current">
+        <div class="visual">
+          <div class="icon cloudy"></div>
+          <div class="temp">58</div>
+          <div class="scale">°F</div>
+        </div>
+        <div class="description">
+          <div class="precip">100%</div>
+          <div class="humidity">97%</div>
+          <div class="wind">4 mph SW</div>
+          <div class="pollen">36</div>
+        </div>
+      </div>
+      <div class="seven-day">
+        <div class="seven-day-fc">
+          <div class="date">Today</div>
+          <div class="icon thunder"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">68°</div>
+            <div class="temp-low">36°</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+        <div class="seven-day-fc">
+          <div class="date">Wednesday</div>
+          <div class="icon sunny"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">50°</div>
+            <div class="temp-low">39°</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+        <div class="seven-day-fc">
+          <div class="date">Thursday</div>
+          <div class="icon sunny"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">55°</div>
+            <div class="temp-low">39°</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+        <div class="seven-day-fc">
+          <div class="date">Friday</div>
+          <div class="icon pc"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">54°</div>
+            <div class="temp-low">43°</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+        <div class="seven-day-fc">
+          <div class="date">Saturday</div>
+          <div class="icon sshowers"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">64°</div>
+            <div class="temp-low">46°</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+        <div class="seven-day-fc">
+          <div class="date">Sunday</div>
+          <div class="icon sshowers"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">64°</div>
+            <div class="temp-low">50°</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+        <div class="seven-day-fc">
+          <div class="date">Monday</div>
+          <div class="icon pc"></div>
+          <div class="seven-day-temp">
+            <div class="temp-high">61°</div>
+            <div class="temp-low">50°</div>
+          </div>
+          <div class="pcount">36</div>
+        </div>
+      </div>
+    </div>
+
+  -->
+
+ 

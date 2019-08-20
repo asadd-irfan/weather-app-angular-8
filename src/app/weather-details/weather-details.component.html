@@ -1,0 +1,132 @@
+<!-- hi -->>
+
+<div class="container"*ngIf="weatherData">
+                   <div>
+      <h1>
+          {{ this.weatherData?.location.name }}, 
+          {{  this.weatherData?.location.country }}
+            
+
+      </h1>
+    </div>
+    <div>
+      <small>{{ today }}</small>
+    </div>
+    <div>
+      <small>{{ this.weatherData?.current.condition.text
+        }}</small>
+    </div>
+    <div>
+      <img
+        src="{{
+          this.weatherData?.current.condition.icon
+        }}"
+        width="80px"
+        height="50px"
+        alt="Nothing Here"
+      />
+      <b>{{ this.weatherData?.current.temp_c }}</b
+      >
+      <sup><small>o</small></sup
+        >C  
+    </div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <small>precipitation in (mm):  {{ this.weatherData?.current.precip_mm }}mm</small><br />
+        <small>humidity :  {{ this.weatherData?.current.humidity }}%</small><br />
+        <small>wind : {{ this.weatherData?.current.wind_mph }} mph</small><br />
+  
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-md-1 col-lg-1 col-sm-1">
+            <small>
+                <b>{{ this.weatherData?.forecast.forecastday[0].date | date : 'EEEE'    }} </b>
+                <br>
+                <img
+                    src="{{  this.weatherData?.forecast.forecastday[0].day.condition.icon  }}"
+                    width="50px"
+                    height="30px"
+                />
+                <br>
+                <b>{{  this.weatherData?.forecast.forecastday[0].day.maxtemp_c   }}<sup>o</sup>C
+                </b>{{ this.weatherData?.forecast.forecastday[0].day.mintemp_c   }}<sup>o</sup>C
+            </small >
+      </div>
+      <div class="col-md-1 col-lg-1 col-sm-1">
+        <small
+          ><b>{{ this.weatherData?.forecast.forecastday[1].date | date : 'EEEE' }}</b><br /><img
+          src="{{
+            this.weatherData?.forecast.forecastday[1].day.condition.icon
+          }}"
+                        width="50px"
+            height="30px"
+            alt="Nothing here"
+          />
+          <br /><b>{{ this.weatherData?.forecast.forecastday[1].day.maxtemp_c   }} <sup>o</sup>C</b> {{ this.weatherData?.forecast.forecastday[1].day.mintemp_c   }}<sup>o</sup>C</small
+        >
+      </div>
+      <div class="col-md-1 col-lg-1 col-sm-1">
+        <small
+          ><b>{{ this.weatherData?.forecast.forecastday[2].date | date : 'EEEE' }}</b><br /><img
+          src="{{
+            this.weatherData?.forecast.forecastday[2].day.condition.icon
+          }}"              width="50px"
+            height="30px"
+            alt="Nothing here"
+          />
+          <br /><b>{{ this.weatherData?.forecast.forecastday[2].day.maxtemp_c   }} <sup>o</sup>C</b> {{ this.weatherData?.forecast.forecastday[2].day.mintemp_c   }}<sup>o</sup>C</small
+        >
+      </div>
+      <div class="col-md-1 col-lg-1 col-sm-1">
+        <small
+          ><b>{{ this.weatherData?.forecast.forecastday[3].date | date : 'EEEE' }}</b><br /><img
+          src="{{
+            this.weatherData?.forecast.forecastday[3].day.condition.icon
+          }}"              width="50px"
+            height="30px"
+            alt="Nothing here"
+          />
+          <br /><b>{{ this.weatherData?.forecast.forecastday[3].day.maxtemp_c   }} <sup>o</sup>C</b> {{ this.weatherData?.forecast.forecastday[3].day.mintemp_c   }}<sup>o</sup>C</small
+        >
+      </div>
+      <div class="col-md-1 col-lg-1 col-sm-1">
+        <small
+          ><b>{{ this.weatherData?.forecast.forecastday[4].date | date : 'EEEE' }}</b><br /><img
+          src="{{
+            this.weatherData?.forecast.forecastday[4].day.condition.icon
+          }}"              width="50px"
+            height="30px"
+            alt="Nothing here"
+          />
+          <br /><b>{{ this.weatherData?.forecast.forecastday[4].day.maxtemp_c   }} <sup>o</sup>C</b> {{ this.weatherData?.forecast.forecastday[4].day.mintemp_c   }}<sup>o</sup>C</small
+        >
+      </div>
+      <div class="col-md-1 col-lg-1 col-sm-1">
+        <small
+          ><b>{{ this.weatherData?.forecast.forecastday[5].date | date : 'EEEE' }}</b><br /><img
+          src="{{
+            this.weatherData?.forecast.forecastday[5].day.condition.icon
+          }}"              width="50px"
+            height="30px"
+            alt="Nothing here"
+          />
+          <br /><b>{{ this.weatherData?.forecast.forecastday[5].day.maxtemp_c   }} <sup>o</sup>C</b> {{ this.weatherData?.forecast.forecastday[5].day.mintemp_c   }}<sup>o</sup>C</small
+        >
+      </div>
+      <div class="col-md-1 col-lg-1 col-sm-1">
+        <small
+          ><b>{{ this.weatherData?.forecast.forecastday[6].date | date : 'EEEE' }}</b><br /><img
+          src="{{
+            this.weatherData?.forecast.forecastday[6].day.condition.icon
+          }}"              width="50px"
+            height="30px"
+            alt="Nothing here"
+          />
+          <br /><b>{{ this.weatherData?.forecast.forecastday[6].day.maxtemp_c   }} <sup>o</sup>C</b> {{ this.weatherData?.forecast.forecastday[6].day.mintemp_c   }}<sup>o</sup>C</small
+        >
+      </div>
+    </div>
+</div>
